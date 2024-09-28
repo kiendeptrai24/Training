@@ -1,0 +1,115 @@
+:: exit
+
+esc
+:q
+
+:: work to file
+
+git config -l // xem cau hinh hien tai
+git ls  // liet ke cac file chua trong thu muc do
+
+mkdir [newfolder]  // tao folder
+touch [tile]  //tao file
+
+echo "[content]" > [file exists] // ghi de content vao file
+echo "[content]" >> [file exists] // them dong moi vao file
+cat [tile]   // xem thong tin co trong file
+
+rm [flie] /// xoa file
+
+
+:: basic git
+
+git add [name] // them tep vao index
+
+git commit -m "description" // tao commit -> repo
+
+git status  // su khac biet giua 3 cay
+
+git diff // so sanh voi commit cuoi cung
+
+git log // lich su commit
+
+
+:: remote central
+
+git init --bare // tao mot central
+git clone [link] [name]   // sao chep va lien ket repo-name
+git fetch   // lay cac thong tin ve commit moi tu  central
+git pull   // lay du lieu tu central ve local repo
+git push   // day cac commit tu repo len central
+
+
+:: checkout commit
+
+git checkout [commit_hash] /// quay ve commit minh muon
+
+
+:: Branch
+git branch -M main // doi ten nhanh master thanh nhanh main
+git branch [name]  /// tao nhanh
+git checkout [name]   /// chuyen doi cac nhanh
+git branch -l || git branch   // xem danh sach cac nhanh hien tai dang lam viec
+git push --set-upstream origin [name of branch exists]  //khi push nhanh moi tao len repo phai lam lenh nay
+git branch -d [Branch]  // xoa nhanh local
+git push origin -d [Branch] /// xoa nhanh tren centralRepo
+
+git branch -l /// kiem tra nhanh local
+git branch -a // kiem tra nhanh centralRepo
+
+:: merge
+
+(master)
+
+git merge B   /// gop nhanh b vao nhanh master
+
+[branch]
+
+git rebase [branch or master]  // tai co so lai nhanh rebase
+
+git rebase --continue //
+
+git rebase --skip  //
+
+
+:: git reset
+
+git reset --soft [id commit] // du lai tat ca
+git reset [id commit] // du file xoa stage
+git reset --hard [id commit] // xoa het tat ca thay doi cua file va stage
+
+:: git revert
+
+git revert HEAD // quay ve commit gan nhat
+git revert --no-edit HEAD //quay ve lan commit gan nhat ma khong co edit
+
+git revert [id commit] // quay ve lan commit da duoc chi dinh
+git revert --no-edit  // quay ve lan commit da duoc chi dinh ma khong co edit
+
+
+:: git fork
+
+git remote -v // xem thong tin fork
+git remote add [new name] [link]  // tao repo theo doi cac cap nhat cua repo chinh
+git fetch [new name] ///keo repo chinh ve [new name]
+git merge [new name]/main ///merge [new name] ve main 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
