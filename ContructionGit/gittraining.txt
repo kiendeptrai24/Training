@@ -94,6 +94,10 @@ git remote add [new name] [link]  // tao repo theo doi cac cap nhat cua repo chi
 git fetch [new name] ///keo repo chinh ve [new name]
 git merge [new name]/main ///merge [new name] ve main 
 
+:: git remote
+
+git remote -v // kiểm tra git có liên kết với một central repo nào không
+git remote remove [remote_name] // xoá liên kiết giữa git và central repo
 
 
 
