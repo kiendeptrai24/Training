@@ -1,3 +1,12 @@
+
+#### note (lưu ý)
+:: content (nội dung) (chủ đề)
+<< content (nội dung) >> (giải thích cách sử dụng)
+... content (nội dung) ... (giải thích nghĩa của dòng lệnh)
+--- content (nội dung) --- (giải thích quá trình sử dụng)
+  [content] -> main (nhánh main)
+
+
 :: exit
 
 esc
@@ -65,11 +74,30 @@ git merge B   ... gop nhanh b vao nhanh master ...
 
 [branch]
 
-git rebase [branch or master]  ... tai co so lai nhanh rebase ...
+:: git rebase
 
-git rebase --continue 
+<< sử dụng khi đang làm trên nhánh khác mà nhánh main bị thay đổi khi mình 
+  muốn cập nhật nhánh main mà mình không muốn merge thì nên dùng rebase>>
 
-git rebase --skip  
+--- đầu tiên là mình đang ở nhánh main muốn rebase main thì phải 
+  chuyển sang nhánh đang làm việc sau đó gõ lệnh ---
+
+git rebase [main]  ... tái cấu trúc ...
+
+--- có thể bị conflict ở đây ---
+--- khi sử lí conflict xong add vào ---
+
+git add [file.txt]
+git add . 
+
+--- tiếp theo tiếp tục rebase bằng lệnh ---
+
+git rebase --continue
+
+<<  Nếu bạn không muốn giải quyết xung đột mà muốn bỏ qua commit đó, bạn có thể chạy lệnh >>
+git rebase --skip   ... skip bỏ qua xung đột khi rebase mà gặt xung dột ...
+
+git rebase --abort  ... Lệnh này sẽ hủy bỏ toàn bộ quá trình rebase và đưa branch của bạn trở về trạng thái trước khi rebase ...
 
 
 :: git reset
@@ -92,7 +120,7 @@ git revert --no-edit  ... quay ve lan commit da duoc chi dinh ma khong co edit .
 git remote -v ... xem thong tin fork ...
 git remote add [new name] [link]  ... tao repo theo doi cac cap nhat cua repo chinh ...
 git fetch [new name] ... keo repo chinh ve [new name] ...
-git merge [new name]/main ... merge [new name] ve main ...
+git merge [new name] << lưu ý đang ở nhánh main>> ... merge [new name] về main ...
 
 :: git remote
 
