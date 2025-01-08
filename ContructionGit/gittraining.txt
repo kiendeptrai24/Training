@@ -131,8 +131,10 @@ git remote remove [remote_name] .. xoá liên kiết giữa git và central repo
 git rm -r --cached .vscode ... xóa .vscode khỏi repo ...
 
 
+git symbolic-ref HEAD ... kiểm tra HEAD đang trỏ tới đâu ...
 
-
+git reflog ... Nếu bạn sử dụng git reset --hard và HEAD bị mất, 
+bạn có thể tìm lại HEAD hoặc khôi phục lại commit trước đó bằng cách sử dụng lệnh git reflog ...
 
 
 
