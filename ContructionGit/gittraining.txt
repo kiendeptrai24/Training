@@ -148,6 +148,12 @@ important !!!!
 git reset --soft HEAD~1 // (HEAD~1 quay lại commit trước đó) nhưng (--soft không làm mất code)
 git restore --staged appsettings.json // Gỡ appsettings.json ra khỏi staging (index) nhưng không xóa nội dung file
 
+khi bị detached HEAD
+git branch // xem đang ở detached hay main
+git checkout main // chuyển về nhánh main
+git merge HEAD@{1}  # Gộp thay đổi từ detached HEAD vào nhánh chính
+
+
 
 
 
