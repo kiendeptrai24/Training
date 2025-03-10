@@ -153,8 +153,7 @@ git branch // xem đang ở detached hay main
 git checkout main // chuyển về nhánh main
 git merge HEAD@{1}  # Gộp thay đổi từ detached HEAD vào nhánh chính
 
-
-
+git reflog // hiện lên tất cả các commit và head bao gồm cả commit đã bị xóa
 
 
 
