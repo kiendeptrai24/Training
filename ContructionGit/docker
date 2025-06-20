@@ -1,0 +1,2 @@
+docker build -t gameserver .
+docker run -dp 3020:3020 gameserver
