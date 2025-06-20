@@ -1,2 +1,9 @@
-docker build -t gameserver .
+docker build -t gameserver . // build ra image
 docker run -dp 3020:3020 gameserver
+
+docker stop <containerId> // stop 
+docker rm <container> // remove container
+docker rm -f <container> // stop and then remove container
+docker ps // ps process status
+docker ps -a // all
+
