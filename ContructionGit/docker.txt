@@ -1,4 +1,4 @@
-docker build -t gameserver . // build ra image
+docker build -t gameserver . // build ra image -t or --tag
 docker run -dp 3020:3020 gameserver
 
 docker stop <containerId> // stop 
@@ -6,4 +6,5 @@ docker rm <container> // remove container
 docker rm -f <container> // stop and then remove container
 docker ps // ps process status
 docker ps -a // all
-
+docker image tag gameserver kienmiu/gameserver // gắn ảnh liên kết ảnh local vs repo => gameserver(local) kienmiu/gameserver(remote)
+docker run -dp 0.0.0.0:3020:3020 kienmiu/gameserver // play with docker run aplication
