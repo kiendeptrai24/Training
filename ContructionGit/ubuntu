@@ -1,0 +1,11 @@
+wsl -d Ubuntu // mo ubuntu
+exit
+redis-cli ping
+
+sudo service redis-server start //Lệnh quản lý các dịch vụ hệ thống (start, stop, restart, status)
+sudo systemctl enable redis-server //Tự khởi động Redis khi bật máy
+sudo systemctl disable redis-server //Ngăn Redis tự khởi động
+
+sudo apt update // cập nhật gói phần mềm cho package
+sudo apt install redis-server // redis
+sudo nano /etc/redis/redis.conf // mở cấu hình chính (nano là trình xoạn thảo terminal) (/etc/redis/redis.conf là Đường dẫn đến file cấu hình chính của Redis server)
