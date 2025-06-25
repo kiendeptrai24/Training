@@ -9,3 +9,10 @@ sudo systemctl disable redis-server //Ngăn Redis tự khởi động
 sudo apt update // cập nhật gói phần mềm cho package
 sudo apt install redis-server // redis
 sudo nano /etc/redis/redis.conf // mở cấu hình chính (nano là trình xoạn thảo terminal) (/etc/redis/redis.conf là Đường dẫn đến file cấu hình chính của Redis server)
+
+Lệnh	Chức năng
+sudo netstat -tuln	Xem các cổng đang mở (TCP/UDP), hiển thị IP và port
+sudo netstat -tulpn	Xem các cổng mở kèm theo tiến trình (PID/Program)
+sudo netstat -an	Hiển thị tất cả kết nối mạng (đang listen, established...)
+sudo netstat -s	Thống kê các kết nối theo giao thức (TCP, UDP, ICMP...)
+sudo netstat -plnt	Chỉ các cổng TCP đang listen và process sử dụng
