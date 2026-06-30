@@ -12,3 +12,16 @@ df -h // kiểm tra ổ cứng
 icacls "C:\Aws\aws-gameserver-sing.pem" /inheritance:r
 icacls "C:\Aws\aws-gameserver-sing.pem" /remove:g "BUILTIN\Users" "Users" "Authenticated Users" "Everyone"
 icacls "C:\Aws\aws-gameserver-sing.pem" /grant:r "$($env:USERNAME):(R)"
+
+
+sudo ss -tulnp
+
+t = TCP
+u = UDP
+l = listening
+n = hiện số port
+p = hiện process đang dùng port
+
+sudo ss -lunp | grep 8080
+sudo ss -ltnp | grep 8080
+ps aux | grep TGTH
